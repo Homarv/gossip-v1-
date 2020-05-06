@@ -21,12 +21,17 @@
     </div>
   </div>
 </nav>
+     
+     
+      <h1> <%= @city.name %></h1>
+      
 
-
-<body>
-
-<h1>Contact</h1>
-<p>Find me in app/views/static/contact.html.erb</p>
-    
-</body>
-</html>
+<% User.where(city_id: @city.id).each do |user| %>
+      <% Gossip.where(user_id: user.id).each do |gossip| %>
+          <%= gossip.title %><br />
+          <%= gossip.user.first_name %></p><br />
+         
+          </div>
+        </div>
+           <% end %>
+    <% end %>

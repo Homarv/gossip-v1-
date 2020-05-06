@@ -26,7 +26,8 @@
 <p>
 <%=@gossip.content%></br>
 <%=@gossip.created_at.strftime("%d of %B, %Y")%></br>
-Auteur : <%=@gossip.user.first_name%><%=@gossip.user.last_name%>
+Auteur : <%=@gossip.user.first_name%><%=@gossip.user.last_name%><%= link_to " Voir l'auteur", user_path(@gossip.user.id) %></br>
+Ville : <%=@gossip.user.city.name%><%= link_to " Voir la ville et ces potins", city_path(@gossip.user.city.id) %>
 </p>
 
 

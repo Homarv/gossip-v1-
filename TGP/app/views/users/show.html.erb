@@ -21,12 +21,13 @@
     </div>
   </div>
 </nav>
+     
+     
+      <h1> <%= @user.first_name %> <%= @user.last_name %></h1>
+      <p>Age :<%= @user.age %> ans</p>
+      Ville : <%=@user.city.name%><%= link_to " Voir tous les potins de la ville", city_path(@user.city.id) %>
 
-
-<body>
-
-<h1>Contact</h1>
-<p>Find me in app/views/static/contact.html.erb</p>
+      <p>Email :<a href="mailto:<%= @user.email %>"><%= @user.email %></a></p>
+      <p>Description :<%= @user.description %></p>
     
-</body>
-</html>
+  
